@@ -26,7 +26,7 @@ describe 'RDS' do
     it {should belong_to_vpc(vpc_id)}
 
     its('db_name') {should eq database_name}
-    its('engine_version') {should eq "5.7"}
+    its('engine_version') {should eq "5.7.22"}
 
     its('endpoint.address') {should eq mysql_database_host}
     its('endpoint.port') {should eq mysql_database_port.to_i}

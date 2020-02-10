@@ -16,7 +16,7 @@ module "rds_mysql" {
   private_subnet_ids = data.terraform_remote_state.prerequisites.outputs.private_subnet_ids
 
   database_instance_class = var.database_instance_class
-  database_version = "5.7"
+  database_version = "5.7.22"
 
   database_name = var.database_name
   database_master_user_password = var.database_master_user_password

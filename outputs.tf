@@ -10,5 +10,5 @@ output "mysql_database_name" {
 
 output "mysql_database_port" {
   description = "The database port."
-  value       = "5432"
+  value       = "3306"
 }

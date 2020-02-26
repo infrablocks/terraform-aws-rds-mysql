@@ -28,6 +28,10 @@ variable "database_version" {
   description = "The database version. If omitted, it lets Amazon decide."
   default = ""
 }
+variable "database_port" {
+  description = "The port the database listens on. 3306 by default."
+  default = "3306"
+}
 
 variable "database_name" {
   description = "The name of the database schema to create. If omitted, no database schema is created initially."

@@ -10,8 +10,8 @@ resource "aws_security_group" "mysql_database_security_group" {
   }
 
   ingress {
-    from_port = 5432
-    to_port   = 5432
+    from_port = var.database_port
+    to_port   = var.database_port
     protocol  = "tcp"
     cidr_blocks = [
       var.private_network_cidr

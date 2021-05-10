@@ -70,10 +70,6 @@ variable "maintenance_window" {
   default = "mon:03:01-mon:05:00"
 }
 
-variable "database_family" {
-  description = "The database family."
-  default = "mysql5.7"
-}
 variable "parameters" {
   description = "A list of parameters containing \"name\", \"value\" and \"apply_method\"."
   type = list(object({

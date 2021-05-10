@@ -6,9 +6,9 @@ describe 'RDS' do
 
   let(:database_name) {vars.database_name}
 
-  let(:vpc_id) {output_for(:prerequisites, 'vpc_id')}
-  let(:mysql_database_port) {output_for(:harness, 'mysql_database_port')}
-  let(:mysql_database_host) {output_for(:harness, 'mysql_database_host')}
+  let(:vpc_id) {output_for(:prerequisites, 'vpc_id', parse: true)}
+  let(:mysql_database_port) {output_for(:harness, 'mysql_database_port', parse: true)}
+  let(:mysql_database_host) {output_for(:harness, 'mysql_database_host', parse: true)}
 
   context 'rds' do
     subject {

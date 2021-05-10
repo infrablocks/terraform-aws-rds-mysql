@@ -56,7 +56,7 @@ module TerraformModule
               state: configuration.state_file,
               directory: '.',
               vars: configuration.vars.to_h,
-              force: true)
+              auto_approve: true)
 
           puts
         end

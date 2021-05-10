@@ -32,7 +32,8 @@ module "database" {
   deployment_identifier = "2f3eddcb"
 
   database_instance_class = "db.t2.medium"
-  database_version = "5.7"
+  database_version = "5.7.22"
+  database_family = "mysql5.7"
 
   database_name = "identity"
   database_master_user = "admin"

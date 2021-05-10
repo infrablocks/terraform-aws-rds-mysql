@@ -28,6 +28,9 @@ variable "database_version" {
   description = "The database version. If omitted, it lets Amazon decide."
   default = ""
 }
+variable "database_family" {
+  description = "The database family."
+}
 variable "database_port" {
   description = "The port the database listens on. 3306 by default."
   default = "3306"

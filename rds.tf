@@ -19,6 +19,8 @@ resource "aws_db_instance" "mysql_database" {
     aws_security_group.mysql_database_security_group.id
   ]
 
+  parameter_group_name = aws_db_parameter_group.mysql_database_parameter_group.name
+
   backup_retention_period = var.backup_retention_period
   backup_window           = var.backup_window
   maintenance_window      = var.maintenance_window

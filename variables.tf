@@ -69,3 +69,13 @@ variable "maintenance_window" {
   description = "The time window in which maintenance should take place."
   default = "mon:03:01-mon:05:00"
 }
+
+variable "parameters" {
+  description = "A list of parameters containing \"name\", \"value\" and \"apply_method\"."
+  type = list(object({
+    name = string
+    value = string
+    apply_method = string
+  }))
+  default = []
+}

@@ -18,6 +18,7 @@ describe 'RDS' do
     it {should exist}
 
     it {should have_security_group("database-security-group-#{component}-#{deployment_identifier}")}
+    it {should have_db_parameter_group("database-parameter-group-#{component}-#{deployment_identifier}")}
 
     it {should have_tag('Name').value("db-instance-#{component}-#{deployment_identifier}")}
     it {should have_tag('Component').value(component)}

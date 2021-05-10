@@ -57,6 +57,7 @@ As mentioned above, the database deploys into an existing base network:
 | private_subnet_ids              | The IDs of the private subnets to deploy the database into                | -                     | yes      |
 | database_instance_class         | The instance type of the RDS instance.                                    | -                     | yes      |
 | database_version                | The database version. If omitted, it lets Amazon decide.                  | -                     | no       |
+| database_family                 | The database family.                                                      | -                     | no       |
 | database_name                   | The DB name to create. If omitted, no database is created initially.      | -                     | yes      |
 | database_master_user_password   | The password for the master database user.                                | -                     | yes      |
 | database_master_user            | The username for the master database user.                                | -                     | yes      |
@@ -66,6 +67,7 @@ As mentioned above, the database deploys into an existing base network:
 | backup_retention_period         | The number of days to retain database backups.                            | 7                     | yes      |
 | backup_window                   | The time window in which backups should take place.                       | "01:00-03:00"         | yes      |
 | maintenance_window              | The time window in which maintenance should take place.                   | "mon:03:01-mon:05:00" | yes      |
+| parameters                      | List of specific parameters to pass to parameter group.                   | -                     | no       |
 
 
 ### Outputs

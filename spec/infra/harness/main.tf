@@ -17,6 +17,7 @@ module "rds_mysql" {
 
   database_instance_class = var.database_instance_class
   database_version = "5.7"
+  database_family = "mysql5.7"
 
   database_name = var.database_name
   database_master_user_password = var.database_master_user_password

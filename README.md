@@ -67,7 +67,7 @@ As mentioned above, the database deploys into an existing base network:
 | backup_retention_period         | The number of days to retain database backups.                            | 7                     | yes      |
 | backup_window                   | The time window in which backups should take place.                       | "01:00-03:00"         | yes      |
 | maintenance_window              | The time window in which maintenance should take place.                   | "mon:03:01-mon:05:00" | yes      |
-| parameters                      | List of specific parameters to pass to parameter group.                   | -                     | no       |
+| database_parameters             | List of specific parameters to pass to parameter group.                   | -                     | no       |
 
 
 ### Outputs

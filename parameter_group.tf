@@ -4,7 +4,7 @@ resource "aws_db_parameter_group" "mysql_database_parameter_group" {
   family      = var.database_family
 
   dynamic "parameter" {
-    for_each = var.parameters
+    for_each = var.database_parameters
 
     content {
       name         = parameter.value.name

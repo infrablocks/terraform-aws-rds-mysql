@@ -12,4 +12,3 @@ gem 'rspec', '~> 3.9'
 gem 'awspec', '~> 1.22'
 gem 'git', '~> 1.7'
 gem 'semantic', '~> 1.6'
-

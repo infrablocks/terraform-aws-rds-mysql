@@ -44,6 +44,9 @@ module "database" {
 As mentioned above, the database deploys into an existing base network:
 * [AWS Base Networking](https://github.com/tobyclemson/terraform-aws-base-networking)
 
+See the 
+[Terraform registry entry](https://registry.terraform.io/modules/infrablocks/rds-mysql/aws/latest) 
+for more details.
 
 ### Inputs
 
@@ -78,6 +81,10 @@ As mentioned above, the database deploys into an existing base network:
 | mysql_database_host | The database host |
 | mysql_database_name | The database name |
 
+### Compatibility
+
+This module is compatible with Terraform versions greater than or equal to 
+Terraform 0.14.
 
 Development
 -----------

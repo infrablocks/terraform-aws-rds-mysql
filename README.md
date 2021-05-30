@@ -42,7 +42,7 @@ module "database" {
 ```
 
 As mentioned above, the database deploys into an existing base network:
-* [AWS Base Networking](https://github.com/tobyclemson/terraform-aws-base-networking)
+* [AWS Base Networking](https://github.com/infrablocks/terraform-aws-base-networking)
 
 See the 
 [Terraform registry entry](https://registry.terraform.io/modules/infrablocks/rds-mysql/aws/latest) 

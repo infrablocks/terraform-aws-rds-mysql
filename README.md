@@ -37,7 +37,7 @@ module "database" {
 
   database_name = "identity"
   database_master_user = "admin"
-  database_master_password = "1D$£#J!LKeE£(9d9"
+  database_master_user_password = "1D$£#J!LKeE£(9d9"
 }
 ```
 

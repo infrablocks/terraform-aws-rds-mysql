@@ -1,6 +1,6 @@
 resource "aws_security_group" "mysql_database_security_group" {
   name        = "database-security-group-${var.component}-${var.deployment_identifier}"
-  description = "Allow access to ${var.component} MySQL database from private network."
+  description = "Default security group for ${var.component} MySQL database instance with deployment identifier ${var.deployment_identifier} allowing access from private network."
   vpc_id      = var.vpc_id
 
   tags = {
@@ -10,8 +10,8 @@ resource "aws_security_group" "mysql_database_security_group" {
   }
 
   ingress {
-    from_port = var.database_port
-    to_port   = var.database_port
+    from_port = local.database_port
+    to_port   = local.database_port
     protocol  = "tcp"
     cidr_blocks = [
       var.private_network_cidr

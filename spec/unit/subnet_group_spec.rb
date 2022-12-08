@@ -30,7 +30,8 @@ describe 'subnet group' do
               .with_attribute_value(
                 :name,
                 including(component)
-                  .and(including(deployment_identifier))))
+                  .and(including(deployment_identifier))
+              ))
     end
 
     it 'includes the component and deployment identifier in the description' do
@@ -39,7 +40,8 @@ describe 'subnet group' do
               .with_attribute_value(
                 :description,
                 including(component)
-                  .and(including(deployment_identifier))))
+                  .and(including(deployment_identifier))
+              ))
     end
 
     it 'uses the provided subnet IDs' do
@@ -67,8 +69,8 @@ describe 'subnet group' do
                 :tags,
                 a_hash_including(
                   Name: including(component)
-                          .and(including(deployment_identifier)),
-                  )
+                          .and(including(deployment_identifier))
+                )
               ))
     end
   end

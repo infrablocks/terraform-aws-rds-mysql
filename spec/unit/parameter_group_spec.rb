@@ -30,7 +30,8 @@ describe 'parameter group' do
               .with_attribute_value(
                 :name,
                 including(component)
-                  .and(including(deployment_identifier))))
+                  .and(including(deployment_identifier))
+              ))
     end
 
     it 'includes the component and deployment identifier in the description' do
@@ -39,7 +40,8 @@ describe 'parameter group' do
               .with_attribute_value(
                 :description,
                 including(component)
-                  .and(including(deployment_identifier))))
+                  .and(including(deployment_identifier))
+              ))
     end
 
     it 'uses the provided database family' do
@@ -73,7 +75,7 @@ describe 'parameter group' do
                 :tags,
                 a_hash_including(
                   Name: including(component)
-                          .and(including(deployment_identifier)),
+                          .and(including(deployment_identifier))
                 )
               ))
     end
@@ -117,7 +119,8 @@ describe 'parameter group' do
                     value: '2',
                     apply_method: 'immediate'
                   }
-                ]))
+                ]
+              ))
     end
   end
 
@@ -157,7 +160,8 @@ describe 'parameter group' do
                       value: parameter[:value],
                       apply_method: parameter[:apply_method]
                     }
-                  )))
+                  )
+                ))
       end
     end
   end

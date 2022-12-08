@@ -94,7 +94,7 @@ describe 'full' do
     end
 
     its('storage_type') { is_expected.to(eq('standard')) }
-    its('performance_insights_enabled') { is_expected.to(eq(false)) }
+    its('performance_insights_enabled') { is_expected.to(be(false)) }
 
     its('max_allocated_storage') { is_expected.to(be_nil) }
   end

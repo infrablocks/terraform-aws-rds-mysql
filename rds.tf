@@ -23,7 +23,7 @@ resource "aws_db_instance" "mysql_database" {
   allocated_storage     = local.allocated_storage
   max_allocated_storage = var.max_allocated_storage
 
-  name     = var.database_name
+  db_name  = var.database_name
   username = var.database_master_user
   password = var.database_master_user_password
 

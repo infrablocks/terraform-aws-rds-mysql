@@ -5,7 +5,7 @@ output "mysql_database_host" {
 
 output "mysql_database_name" {
   description = "The database name."
-  value       = aws_db_instance.mysql_database.name
+  value       = aws_db_instance.mysql_database.db_name
 }
 
 output "mysql_database_port" {

@@ -104,7 +104,7 @@ describe 'RDS' do
     it 'uses the provided database name' do
       expect(@plan)
         .to(include_resource_creation(type: 'aws_db_instance')
-              .with_attribute_value(:name, database_name))
+              .with_attribute_value(:db_name, database_name))
     end
 
     it 'uses the provided database username' do

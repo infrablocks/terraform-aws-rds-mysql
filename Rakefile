@@ -96,18 +96,14 @@ namespace :keys do
     )
   end
 
-  namespace :secrets do
-    namespace :gpg do
-      RakeGPG.define_generate_key_task(
-        output_directory: 'config/secrets/ci',
-        name_prefix: 'gpg',
-        owner_name: 'InfraBlocks Maintainers',
-        owner_email: 'maintainers@infrablocks.io',
-        owner_comment: 'terraform-aws-rds-mysql CI Key'
-      )
-    end
-
-    task generate: ['gpg:generate']
+  namespace :gpg do
+    RakeGPG.define_generate_key_task(
+      output_directory: 'config/secrets/ci',
+      name_prefix: 'gpg',
+      owner_name: 'InfraBlocks Maintainers',
+      owner_email: 'maintainers@infrablocks.io',
+      owner_comment: 'terraform-aws-base-networking CI Key'
+    )
   end
 end
 

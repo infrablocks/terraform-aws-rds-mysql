@@ -64,11 +64,6 @@ namespace :git do
   end
 end
 
-RakeTerraform.define_installation_tasks(
-  path: File.join(Dir.pwd, 'vendor', 'terraform'),
-  version: '1.3.1'
-)
-
 namespace :encryption do
   namespace :directory do
     desc 'Ensure CI secrets directory exists.'

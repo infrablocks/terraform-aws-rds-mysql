@@ -13,8 +13,6 @@ resource "aws_security_group" "mysql_database_security_group" {
     from_port = local.database_port
     to_port   = local.database_port
     protocol  = "tcp"
-    cidr_blocks = [
-      var.private_network_cidr
-    ]
+    cidr_blocks = var.allowed_cidrs
   }
 }

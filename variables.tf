@@ -7,10 +7,6 @@ variable "private_subnet_ids" {
   description = "The IDs of the private subnets to deploy the database into."
   type        = list(string)
 }
-// TODO: switch security group rules to be less specific about whether public or private.
-variable "private_network_cidr" {
-  description = "The CIDR of the private network allowed access to the database."
-}
 
 variable "component" {
   description = "The component this database will serve."
@@ -72,6 +68,11 @@ variable "database_parameters" {
     apply_method = string
   }))
   default = []
+}
+
+variable "allowed_cidrs" {
+  description = "The CIDRs allowed to access the database."
+  type = list(string)
 }
 
 variable "use_multiple_availability_zones" {

@@ -25,6 +25,11 @@ ENHANCEMENTS:
 * An `enable_performance_insights` variable has been added allowing performance
   insights to be enabled for the database instance.
 
+BACKWARDS INCOMPATIBILITIES / NOTES:
+
+* The `private_network_cidr` variable has been renamed to `allowed_cidrs` and is
+  now a list of CIDRs, allowing more complex access controls to be configured.
+
 ## 1.0.0 (May 28th, 2021)
 
 BACKWARDS INCOMPATIBILITIES / NOTES:

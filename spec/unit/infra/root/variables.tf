@@ -1,7 +1,5 @@
 variable "region" {}
 
-variable "private_network_cidr" {}
-
 variable "component" {}
 variable "deployment_identifier" {}
 
@@ -29,6 +27,10 @@ variable "allocated_storage" {
 variable "max_allocated_storage" {
   type    = number
   default = null
+}
+
+variable "allowed_cidrs" {
+  type = list(string)
 }
 
 variable "database_name" {}

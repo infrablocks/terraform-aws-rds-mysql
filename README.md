@@ -26,7 +26,8 @@ module "database" {
   region = "eu-west-2"
   vpc_id = "vpc-b197da6b"
   private_subnet_ids = "subnet-7cd8832a,subnet-0199db7c"
-  private_network_cidr = "10.0.0.0/16"
+  
+  allowed_cidrs = ["10.0.0.0/16"]
 
   component = "identity-server"
   deployment_identifier = "2f3eddcb"

@@ -9,8 +9,8 @@ describe 'security group' do
   let(:deployment_identifier) do
     var(role: :root, name: 'deployment_identifier')
   end
-  let(:private_network_cidr) do
-    var(role: :root, name: 'private_network_cidr')
+  let(:allowed_cidrs) do
+    var(role: :root, name: 'allowed_cidrs')
   end
   let(:vpc_id) do
     output(role: :prerequisites, name: 'vpc_id')
@@ -54,7 +54,7 @@ describe 'security group' do
     end
 
     it 'allows ingress on port 3306 to nodes within the provided ' \
-       'private network CIDR' do
+       'allowed CIDRs' do
       expect(@plan)
         .to(include_resource_creation(type: 'aws_security_group')
               .with_attribute_value(
@@ -63,7 +63,7 @@ describe 'security group' do
                   from_port: 3306,
                   to_port: 3306,
                   protocol: 'tcp',
-                  cidr_blocks: [private_network_cidr]
+                  cidr_blocks: allowed_cidrs
                 )
               ))
     end
@@ -101,7 +101,7 @@ describe 'security group' do
     end
 
     it 'allows ingress on the provided port to nodes within the provided ' \
-       'private network CIDR' do
+       'allowed CIDRs' do
       expect(@plan)
         .to(include_resource_creation(type: 'aws_security_group')
               .with_attribute_value(
@@ -110,7 +110,7 @@ describe 'security group' do
                   from_port: 3307,
                   to_port: 3307,
                   protocol: 'tcp',
-                  cidr_blocks: [private_network_cidr]
+                  cidr_blocks: allowed_cidrs
                 )
               ))
     end

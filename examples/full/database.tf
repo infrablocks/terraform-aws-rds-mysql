@@ -7,7 +7,7 @@ module "rds_mysql" {
   vpc_id             = module.base_network.vpc_id
   private_subnet_ids = module.base_network.private_subnet_ids
 
-  private_network_cidr = module.base_network.vpc_cidr
+  allowed_cidrs = [module.base_network.vpc_cidr]
 
   database_family  = "mysql5.7"
   database_version = "5.7.40"

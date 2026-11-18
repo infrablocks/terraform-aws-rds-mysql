@@ -76,7 +76,7 @@ describe 'full' do
     it { is_expected.to(belong_to_vpc(vpc_id)) }
 
     its('db_name') { is_expected.to(eq(database_name)) }
-    its('engine_version') { is_expected.to(eq('5.7.40')) }
+    its('engine_version') { is_expected.to(eq('8.4.13')) }
 
     its('endpoint.address') do
       is_expected.to(eq(mysql_database_host))
@@ -93,7 +93,7 @@ describe 'full' do
       is_expected.to(eq('mon:03:01-mon:05:00'))
     end
 
-    its('storage_type') { is_expected.to(eq('standard')) }
+    its('storage_type') { is_expected.to(eq('gp3')) }
     its('performance_insights_enabled') { is_expected.to(be(false)) }
 
     its('max_allocated_storage') { is_expected.to(be_nil) }

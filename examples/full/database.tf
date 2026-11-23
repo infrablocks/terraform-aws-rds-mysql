@@ -12,7 +12,7 @@ module "rds_mysql" {
   database_family         = "mysql8.4"
   database_version        = "8.4.13"
   database_instance_class = "db.t4g.micro"
-  storage_type            = "gp3"
+  storage_type            = "gp2"
   allocated_storage       = 20
 
   database_name                 = var.database_name

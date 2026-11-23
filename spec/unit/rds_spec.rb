@@ -216,14 +216,14 @@ describe 'RDS' do
   describe 'when database_version provided' do
     before(:context) do
       @plan = plan(role: :root) do |vars|
-        vars.database_version = '5.7.38'
+        vars.database_version = '8.4.13'
       end
     end
 
     it 'uses the provided engine version' do
       expect(@plan)
         .to(include_resource_creation(type: 'aws_db_instance')
-              .with_attribute_value(:engine_version, '5.7.38'))
+              .with_attribute_value(:engine_version, '8.4.13'))
     end
   end
 

@@ -16,6 +16,6 @@ database_name: 'testservicedb'
 database_master_user: 'testservice'
 database_master_user_password: 'testpassword'
 
-database_family: "mysql5.7"
+database_family: "mysql8.4"
 
 private_zone_id: 'Z0211739BXR21FNN139O'
